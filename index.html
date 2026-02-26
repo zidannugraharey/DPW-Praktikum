@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!--Halaman Depan-->
-    <div>
-        <h1><center>You're Invited!</center></h1>
-        <p style="font-size:18px;"><center>Join us in celebrating the wedding of</center></p>
-        <h1><center>Jane Doe <br> & <br> John Smith</center></h1>
-        
-        <p><center>Date: June 15, 2024</center></p>
-        <p><center>Location: Sunset Beach Resort</center></p>
-        <p><center>Please RSVP by May 15, 2024</center></p>
+    <!-- Halaman Depan -->
+    <div class="invitation">
+        <div class="gold-frame"></div>
+
+        <div class="content">
+            <div class="guest">
+                <p class="guest-label">Kepada Yth.</p>
+                <input class="guest-name" id="guestName" placeholder="Nama Tamu">
+                <div class="line"></div>
+            </div>
+            <h1 class="title">You're Invited!</h1>
+            <p class="subtitle">Join us in celebrating the wedding of</p>
+
+            <h1 class="name">
+                Zidan Nugraha Rey <br>
+                <span class="and">&</span><br>
+                Asma Elhasna Hamid
+            </h1>
+
+            <p class="info">Date: June 15, 2030</p>
+            <p class="info">Location: Sunset Beach Resort</p>
+            <p class="info">Please RSVP by May 15, 2024</p>
+        </div>
     </div>
+
     <!-- Halaman Isi -->
-    <div>
-        <br><hr>
-        <h1><center>Wedding Details</center></h1>
-        <p><center>Thank you for attending our wedding celebration!</center></p>
+    <div class="opening-prayer">
+        <p class="bismillah">Bismillahirrahmanirrahim</p>
+        <p class="doa-text">
+            Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
+            Ya Allah, izinkanlah kami untuk menempuh hidup baru dalam ikatan suci
+            pernikahan yang Engkau ridhoi.
+        </p>
+        <h1 class="name">
+            Zidan Nugraha Rey <br>
+            <span class="and">&</span><br>
+            Asma Elhasna Hamid
+        </h1>
+        <img src="img/wedd.png"></img>
+    </div>
+    <div class="details">
+        <div class="event-box">
+            <h1 class="title">Akad</h1>
+            <p class="info">Date: June 15, 2030</p>
+            <p class="info">Time: 10:00 AM</p>
+            <p class="info">Location: Sunset Beach Resort - Garden Hall</p>
+            <p class="btn-map">View Map</p>
+        </div>
+        <div class="event-box">
+            <h1 class="title">Resepsi</h1>
+            <p class="info">Date: June 15, 2030</p>
+            <p class="info">Time: 12:00 PM - 5:00 PM</p>
+            <p class="info">Location: Sunset Beach Resort - Ballroom</p>
+            <p class="btn-map">View Map</p>
+        </div>
+    </div>
+    <div class="container-undangan">
+        <ul class="info-list">
+            <li>Hari/Tanggal: Sabtu, 35 Juni 2030</li>
+            <li>Pukul: 08.00 WIB - Selesai</li>
+            <li>Tempat: Gedung Serbaguna</li>
+            <li>Dresscode: Batik Formal</li>
+        </ul>
+    </div>
+    <div class="rsvp-section">
+        <h2 class="rsvp-title">Konfirmasi Kehadiran</h2>
+
+        <form class="rsvp-form">
+            <input type="text" placeholder="Nama Lengkap" required>
+            <select required>
+                <option value="" disabled selected>Apakah Anda akan hadir?</option>
+                <option value="hadir">Ya, Saya akan hadir</option>
+                <option value="tidak">Maaf, tidak bisa hadir</option>
+            </select>
+            <select>
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+            </select>
+            <button type="submit" class="btn-rsvp">Kirim Konfirmasi</button>
+        </form>
     </div>
 </body>
+
 </html>

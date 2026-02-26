@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invitation {
+    position: relative;
+    width: 650px;
+    background: white;
+    padding: 60px 40px;
+    margin-top: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.gold-frame {
+    position: absolute;
+    inset: 20px;
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #c6a75e, #f5e6b3, #b8903f) 1;
+    pointer-events: none;
+}
+
+.title {
+    letter-spacing: 3px;
+    font-size: 24px;
+    color: #555;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.name {
+    font-size: 36px;
+    margin: 30px 0;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.and {
+    color: #b8903f;
+    font-size: 30px;
+}
+
+.info {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #444;
+}
+
+.details {
+    width: 900px;
+    background: white;
+    padding: 60px;
+    margin: 60px auto 120px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.details::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #b8903f, transparent);
+}
+
+.event-box {
+    width: 45%;
+    text-align: center;
+}
+
+.event-box h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.guest {
+    margin-bottom: 40px;
+}
+
+.guest-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.guest-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    border: none;
+    text-align: center;
+}
+
+.line {
+    width: 180px;
+    height: 1px;
+    margin: 10px auto 0;
+    background: linear-gradient(to right, transparent, #b8903f, transparent);
+}
+
+.opening-prayer {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+
+.bismillah {
+    font-style: italic;
+    font-size: 18px;
+    color: #b8903f;
+    margin-bottom: 15px;
+}
+
+.doa-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.btn-map {
+    background-color: #b8903f;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+
+.btn-map:hover {
+    background-color: #b8903fc3;
+}
+
+.info-list {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.info-list li {
+    margin-bottom: 5px;
+}
+
+.rsvp-section {
+    width: 650px;
+    background: white;
+    padding: 50px 40px;
+    margin: 50px auto 100px auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.rsvp-title {
+    font-size: 28px;
+    color: #b8903f;
+    /* Warna emas sesuai tema */
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #555;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+    outline: none;
+    border-color: #b8903f;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(184, 144, 63, 0.3);
+}
+
+.btn-rsvp {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #b8903f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-rsvp:hover {
+    background-color: #96752e;
+}
