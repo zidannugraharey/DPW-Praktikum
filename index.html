@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undangan Pernikahan</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- CARD 1 : TAMU -->
+    <div class="card-wrapper card-tamu">
+        <div class="card-content">
+            <p class="teks-subtitle">Kepada Yth.</p>
+            <h2 class="nama-tamu">Bapak/Ibu/Saudara/i</h2>
+            <p class="teks-pengantar">
+                Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir dalam acara pernikahan kami.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 2 : UTAMA -->
     <main class="card-wrapper">
         <div class="card-content">
+
             <section class="card-header">
                 <p class="teks-subtitle">Maha Suci Allah</p>
-                <p class="teks-pengantar">Yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang Kau ciptakan di antara putra-putri kami:</p>
+                <p class="teks-pengantar">
+                    Yang telah menciptakan makhluk-Nya berpasang-pasangan...
+                </p>
             </section>
 
             <section class="card-body">
-                <h1 class="nama-mempelai" style="font-family: 'Great Vibes', cursive; font-size: 96px; color: #6d3030; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Rey</h1>
+                <h1 class="nama-mempelai">Rey</h1>
                 <span class="simbol-dan">&</span>
-                <h1 class="nama-mempelai" style="font-family: 'Great Vibes', cursive; font-size: 96px; color: #6d3030; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Asma</h1>
+                <h1 class="nama-mempelai">Asma</h1>
+                <img src="fotowed.jpeg" alt="Foto Mempelai" class="foto-mempelai">
             </section>
 
             <section class="card-footer">
+                <div class="countdown-wrapper">
+                    <h2>Menuju Akad</h2>
+                    <div class="countdown-box" id="countdown-akad"></div>
+                </div>
+
+                <div class="countdown-wrapper">
+                    <h2>Menuju Resepsi</h2>
+                    <div class="countdown-box" id="countdown-resepsi"></div>
+                </div>
+
                 <ul class="jadwal-acara">
                     <li class="kartu-jadwal">
                         <h3 class="judul-jadwal">Akad Nikah</h3>
                         <p class="tanggal-jadwal">Sabtu, 15 Juni 2040</p>
                         <p class="waktu-jadwal">08.00 - 10.00 WIB</p>
                         <p class="lokasi-jadwal">Masjid Agung An-Nur Pekanbaru</p>
+                        <a href="#" target="_blank" class="tombol-map">View Map</a>
                     </li>
+
                     <li class="kartu-jadwal">
                         <h3 class="judul-jadwal">Resepsi</h3>
                         <p class="tanggal-jadwal">Sabtu, 15 Juni 2040</p>
                         <p class="waktu-jadwal">11.00 - Selesai</p>
-                        <p class="lokasi-jadwal">Sunset Beach Resort</p>
+                        <p class="lokasi-jadwal">Hotel Pangeran</p>
+                        <a href="#" target="_blank" class="tombol-map">View Map</a>
                     </li>
                 </ul>
-                
-                <hr class="garis-pembatas" style="border: none; height: 1px; background: #d4af37; margin: 40px 0; opacity: 0.5;">
-                
-                <div style="margin-bottom: 30px;">
-                    <a href="#" class="tombol-rsvp">Konfirmasi Kehadiran</a>
-                </div>
-
-                <form class="form-kehadiran">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <select>
-                        <option>Hadir</option>
-                        <option>Tidak Hadir</option>
-                    </select>
-                </form>
             </section>
+
         </div>
     </main>
+
+    <!-- CARD 3 : RSVP -->
+    <div class="card-wrapper">
+        <div class="card-content">
+            <h2 class="judul-rsvp">Konfirmasi Kehadiran</h2>
+
+            <form class="form-kehadiran">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <select>
+                    <option>Hadir</option>
+                    <option>Tidak Hadir</option>
+                </select>
+                <button type="submit" class="tombol-rsvp">
+                    Kirim Konfirmasi
+                </button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
