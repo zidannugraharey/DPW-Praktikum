@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan</title>
+    <title>Undangan Pernikahan - Rey & Asma</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <main class="card-wrapper">
         <div class="card-content">
             <section class="card-header">
@@ -15,42 +19,63 @@
             </section>
 
             <section class="card-body">
-                <h1 class="nama-mempelai" style="font-family: 'Great Vibes', cursive; font-size: 96px; color: #6d3030; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Rey</h1>
+                <h1 class="nama-mempelai">Rey</h1>
                 <span class="simbol-dan">&</span>
-                <h1 class="nama-mempelai" style="font-family: 'Great Vibes', cursive; font-size: 96px; color: #6d3030; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Asma</h1>
+                <h1 class="nama-mempelai">Asma</h1>
             </section>
+
+            <div id="countdown" class="timer-container">
+                <div class="timer-segment">
+                    <span id="days">00</span>
+                    <div class="timer-label">Hari</div> 
+                </div>
+                <div class="timer-segment">
+                    <span id="hours">00</span>
+                    <div class="timer-label">Jam</div>
+                </div>
+                <div class="timer-segment">
+                    <span id="minutes">00</span>
+                    <div class="timer-label">Menit</div>
+                </div>
+                <div class="timer-segment">
+                    <span id="seconds">00</span>
+                    <div class="timer-label">Detik</div>
+                </div>
+            </div>
 
             <section class="card-footer">
                 <ul class="jadwal-acara">
                     <li class="kartu-jadwal">
                         <h3 class="judul-jadwal">Akad Nikah</h3>
-                        <p class="tanggal-jadwal">Sabtu, 15 Juni 2040</p>
-                        <p class="waktu-jadwal">08.00 - 10.00 WIB</p>
-                        <p class="lokasi-jadwal">Masjid Agung An-Nur Pekanbaru</p>
+                        <p>Sabtu, 15 Juni 2040</p>
+                        <p><strong>08.00 - 10.00 WIB</strong></p>
+                        <p>Masjid Agung An-Nur Pekanbaru</p>
                     </li>
                     <li class="kartu-jadwal">
                         <h3 class="judul-jadwal">Resepsi</h3>
-                        <p class="tanggal-jadwal">Sabtu, 15 Juni 2040</p>
-                        <p class="waktu-jadwal">11.00 - Selesai</p>
-                        <p class="lokasi-jadwal">Sunset Beach Resort</p>
+                        <p>Sabtu, 15 Juni 2040</p>
+                        <p><strong>11.00 - Selesai</strong></p>
+                        <p>Sunset Beach Resort</p>
                     </li>
                 </ul>
                 
-                <hr class="garis-pembatas" style="border: none; height: 1px; background: #d4af37; margin: 40px 0; opacity: 0.5;">
+                <hr class="garis-pembatas">
                 
-                <div style="margin-bottom: 30px;">
+                <div class="rsvp-section">
                     <a href="#" class="tombol-rsvp">Konfirmasi Kehadiran</a>
-                </div>
 
-                <form class="form-kehadiran">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <select>
-                        <option>Hadir</option>
-                        <option>Tidak Hadir</option>
-                    </select>
-                </form>
+                    <form class="form-kehadiran">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                        <select>
+                            <option>Hadir</option>
+                            <option>Tidak Hadir</option>
+                        </select>
+                    </form>
+                </div>
             </section>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

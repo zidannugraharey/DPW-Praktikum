@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* --- Implementasi Styling Dasar --- */
 body {
     font-family: 'Lora', serif;
     background-color: #6d3030;
-    padding: 40px;
-    
-    /* Tambahan agar konten berada di tengah vertikal layar */
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,124 +17,167 @@ body {
 .card-wrapper {
     background-color: #ffffff;
     width: 100%;
-    max-width: 850px;
+    max-width: 800px;
     border-radius: 24px;
-    margin: 0 auto; 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
     overflow: hidden;
+    border: 8px solid #fdfaf0;
 }
 
 .card-content {
-    padding: 50px 70px 70px;
+    padding: 40px 20px;
 }
 
-/* --- Styling Elemen HTML: Tipografi Heading & Paragraf --- */
+/* Header Tipografi */
 .teks-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    letter-spacing: 5px; 
-    text-transform: uppercase; 
-    color: #d4af37; 
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-bottom: 15px;
 }
 
 .teks-pengantar {
-    line-height: 1.8;
-    color: #555555;
-    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+/* Nama Mempelai */
+.nama-mempelai {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(60px, 10vw, 90px);
+    color: #6d3030;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .simbol-dan {
     display: block;
     font-family: 'Great Vibes', cursive;
-    font-size: 50px;
+    font-size: 40px;
     color: #d4af37;
-    margin: 20px 0;
+    margin: -10px 0;
 }
 
-/* --- Styling Elemen HTML: List / Daftar Jadwal (Flexbox) --- */
-.jadwal-acara {
-    list-style-type: none;
-    padding: 0;
+/* Countdown Timer Styling */
+.timer-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.timer-segment {
+    background: #fdfaf0;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 75px;
+}
+
+.timer-segment span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6d3030;
+}
+
+.timer-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d4af37;
+}
+
+/* Jadwal Acara */
+.jadwal-acara {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .kartu-jadwal {
     flex: 1;
+    min-width: 250px;
     padding: 20px;
-    border-left: 1px solid rgba(212, 175, 55, 0.3); /* Menyimulasikan garis vertikal tengah */
 }
 
 .kartu-jadwal:first-child {
-    border-left: none; /* Menghilangkan garis kiri pada kartu pertama */
-    border-right: 1px solid rgba(212, 175, 55, 0.3);
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .judul-jadwal {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 20px;
     color: #6d3030;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.tanggal-jadwal, .waktu-jadwal, .lokasi-jadwal {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #444444;
+.garis-pembatas {
+    border: none;
+    height: 1px;
+    background: #d4af37;
+    margin: 30px 0;
+    opacity: 0.3;
 }
 
-.waktu-jadwal {
-    font-weight: bold;
-}
-
-/* --- Styling Elemen HTML: Link & Animasi Hover --- */
+/* RSVP & Form */
 .tombol-rsvp {
     display: inline-block;
     background-color: #6d3030;
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 30px;
-    transition: all 0.3s ease; /* Transisi halus */
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    font-weight: bold;
+    border: 2px solid #6d3030;
+    margin-bottom: 25px;
 }
 
 .tombol-rsvp:hover {
-    background-color: #ffffff;
+    background-color: transparent;
     color: #6d3030;
-    box-shadow: 0 5px 15px rgba(109, 48, 48, 0.2);
 }
 
-/* --- Styling Elemen HTML: Form --- */
 .form-kehadiran {
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
-    text-align: left;
 }
 
 .form-kehadiran input, .form-kehadiran select {
     width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
     font-family: 'Lora', serif;
 }
 
-/* Responsivitas untuk layar kecil */
-@media (max-width: 768px) {
-    .jadwal-acara {
-        flex-direction: column;
-        gap: 10px;
+/* Media Queries (Mobile Friendly) */
+@media (max-width: 600px) {
+    .kartu-jadwal:first-child { 
+        border-right: none; 
+        border-bottom: 1px solid #eee; 
     }
-    .kartu-jadwal, .kartu-jadwal:first-child {
-        border-right: none;
-        border-left: none;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    .timer-container { 
+        gap: 8px; 
     }
-    .card-content {
-        padding: 40px 20px;
+    .timer-segment { 
+        min-width: 60px; 
+        padding: 10px; 
+    }
+    .timer-segment span { 
+        font-size: 20px; 
     }
 }
