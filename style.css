@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Implementasi Styling Dasar --- */
+body {
+    font-family: 'Lora', serif;
+    background-color: #6d3030;
+    padding: 40px;
+    
+    /* Tambahan agar konten berada di tengah vertikal layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 850px;
+    border-radius: 24px;
+    margin: 0 auto; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 50px 70px 70px;
+}
+
+/* --- Styling Elemen HTML: Tipografi Heading & Paragraf --- */
+.teks-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    color: #d4af37; 
+}
+
+.teks-pengantar {
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+.simbol-dan {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #d4af37;
+    margin: 20px 0;
+}
+
+/* --- Styling Elemen HTML: List / Daftar Jadwal (Flexbox) --- */
+.jadwal-acara {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.kartu-jadwal {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid rgba(212, 175, 55, 0.3); /* Menyimulasikan garis vertikal tengah */
+}
+
+.kartu-jadwal:first-child {
+    border-left: none; /* Menghilangkan garis kiri pada kartu pertama */
+    border-right: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.judul-jadwal {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #6d3030;
+    margin-bottom: 15px;
+}
+
+.tanggal-jadwal, .waktu-jadwal, .lokasi-jadwal {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444444;
+}
+
+.waktu-jadwal {
+    font-weight: bold;
+}
+
+/* --- Styling Elemen HTML: Link & Animasi Hover --- */
+.tombol-rsvp {
+    display: inline-block;
+    background-color: #6d3030;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+.tombol-rsvp:hover {
+    background-color: #ffffff;
+    color: #6d3030;
+    box-shadow: 0 5px 15px rgba(109, 48, 48, 0.2);
+}
+
+/* --- Styling Elemen HTML: Form --- */
+.form-kehadiran {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-kehadiran input, .form-kehadiran select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+    .jadwal-acara {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .kartu-jadwal, .kartu-jadwal:first-child {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .card-content {
+        padding: 40px 20px;
+    }
+}
